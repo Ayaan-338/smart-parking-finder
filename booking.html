@@ -1,0 +1,93 @@
+<!-- booking.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking | Smart Parking</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="home.html" class="logo">Park<span>Smart</span></a>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="parking.html">Parking</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-bg" style="background-image: url('https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=2070&auto=format&fit=crop');"></div>
+
+  <main class="content-wrapper form-page">
+    <div class="form-container">
+      <h2>Reserve Your Spot in Ahmedabad</h2>
+      <form id="bookingForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label for="vehicle">Vehicle Number (GJ reg.)</label>
+          <input type="text" id="vehicle" name="vehicle" required placeholder="GJ-01-AB-1234">
+        </div>
+        <div class="form-group">
+          <label for="location">Parking Location</label>
+          <select id="location" name="location" required>
+            <option value="" disabled selected>Select location in Ahmedabad</option>
+            <option value="Alpha One Mall">Alpha One Mall</option>
+            <option value="CG Road">CG Road</option>
+            <option value="Sabarmati Riverfront">Sabarmati Riverfront</option>
+            <option value="Gandhi Ashram">Gandhi Ashram</option>
+            <option value="Kankaria Lake">Kankaria Lake</option>
+            <option value="Vastrapur Lake">Vastrapur Lake</option>
+            <option value="Parimal Garden">Parimal Garden</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="timeslot">Time Slot (IST)</label>
+          <select id="timeslot" name="timeslot" required>
+            <option value="" disabled selected>Select time (Indian Standard)</option>
+            <option value="08:00-10:00">08:00 - 10:00</option>
+            <option value="10:00-12:00">10:00 - 12:00</option>
+            <option value="12:00-14:00">12:00 - 14:00</option>
+            <option value="14:00-16:00">14:00 - 16:00</option>
+            <option value="16:00-18:00">16:00 - 18:00</option>
+            <option value="18:00-20:00">18:00 - 20:00</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit Booking</button>
+      </form>
+
+      <!-- extra info: parking rules -->
+      <div class="booking-info">
+        <p><i class="fas fa-info-circle"></i> Free cancellation up to 1 hour before. Maximum 4 hours per booking.</p>
+      </div>
+    </div>
+
+    <!-- Additional section: recent bookings (static) -->
+    <div class="recent-activity">
+      <h3>Recent activity in Ahmedabad</h3>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> Alpha One Mall - 2 slots booked 5 mins ago</li>
+        <li><i class="fas fa-check-circle"></i> CG Road - 1 slot booked 12 mins ago</li>
+        <li><i class="fas fa-clock"></i> Kankaria Lake - 3 slots available now</li>
+      </ul>
+    </div>
+  </main>
+
+  <div class="time-india" id="indiaTime">Loading Indian time...</div>
+  <footer class="page-footer">
+    <p>&copy; 2026 ParkSmart — Ahmedabad, Gujarat, India</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

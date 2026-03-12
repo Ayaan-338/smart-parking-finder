@@ -1,0 +1,72 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Smart Parking</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="home.html" class="logo">Park<span>Smart</span></a>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="parking.html">Parking</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-bg" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');"></div>
+
+  <main class="content-wrapper form-page">
+    <div class="form-container contact-form">
+      <h2>Get in touch — Ahmedabad Office</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="contactName">Name</label>
+          <input type="text" id="contactName" name="contactName" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" name="contactEmail" required placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required placeholder="How can we help?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+      </form>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Contact info and map (static) -->
+    <div class="contact-details">
+      <h3>Visit us</h3>
+      <p><i class="fas fa-map-marker-alt"></i> 204, Iconic Shyamal, Ahmedabad, Gujarat 380015</p>
+      <p><i class="fas fa-phone-alt"></i> +91 12 345 67893</p>
+      <p><i class="fas fa-envelope"></i> ventex@gmail.com</p>
+      <div class="small-map" id="miniMap" style="height: 200px; border-radius: 20px; margin-top: 1rem;"></div>
+    </div>
+  </main>
+
+  <div class="time-india" id="indiaTime">Loading Indian time...</div>
+  <footer class="page-footer">
+    <p>&copy; 2026 ParkSmart — Ahmedabad, Gujarat, India</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

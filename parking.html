@@ -1,0 +1,65 @@
+<!-- parking.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parking | Smart Finder</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="home.html" class="logo">Park<span>Smart</span></a>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="parking.html" class="active">Parking</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page specific background (different image) -->
+  <div class="page-bg" style="background-image: url('https://images.unsplash.com/photo-1590674899484-13f8c59a8034?q=80&w=2070&auto=format&fit=crop');"></div>
+
+  <main class="content-wrapper">
+    <h2 class="section-title">Available Parking in Ahmedabad</h2>
+
+    <!-- Map Container for Ahmedabad -->
+    <div id="ahmedabad-map" class="map-container"></div>
+
+    <!-- Filter / search bar (extra) -->
+    <div class="filter-bar">
+      <input type="text" id="searchParking" placeholder="Search location...">
+      <select id="slotFilter">
+        <option value="all">All slots</option>
+        <option value="high">10+ available</option>
+        <option value="low">Less than 10</option>
+      </select>
+    </div>
+
+    <!-- Parking Cards Grid (will be populated by JS, but also static fallback) -->
+    <div class="card-grid" id="parkingGrid">
+      <!-- static cards, but we'll enhance with JS -->
+    </div>
+
+    <!-- Additional info section -->
+    <section class="parking-info">
+      <h3>Why use smart parking?</h3>
+      <p>Our sensors cover major areas: Alpha One, CG Road, Riverfront, Ashram, Kankaria, Vastrapur. Live data updated every 5 seconds.</p>
+    </section>
+  </main>
+
+  <div class="time-india" id="indiaTime">Loading Indian time...</div>
+  <footer class="page-footer">
+    <p>&copy; 2025 ParkSmart — Ahmedabad, Gujarat, India</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

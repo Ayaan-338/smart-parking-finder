@@ -1,0 +1,79 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Smart Parking</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="home.html" class="logo">Park<span>Smart</span></a>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="parking.html">Parking</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-bg" style="background-image: url('https://images.unsplash.com/photo-1529539795054-3c162aab037a?q=80&w=2070&auto=format&fit=crop');"></div>
+
+  <main class="content-wrapper about-content">
+    <h2 class="section-title">About Smart Parking Finder – Ahmedabad</h2>
+    <div class="text-card">
+      <p><strong>Smart Parking Finder</strong> is an innovative solution designed to eliminate the stress of finding parking in busy urban centers like Ahmedabad. Using real-time sensor data and predictive analytics, we connect drivers to available spots instantly.</p>
+      <p>Our mission is to <em>reduce traffic congestion</em> caused by cruising for parking — studies show that up to 30% of city traffic is from vehicles searching for a space. By guiding you directly to an open spot, we save time, lower emissions, and create smarter cities.</p>
+      <p>In Ahmedabad — Gujarat's vibrant heart — we partner with municipal lots, malls, and public spaces to provide seamless parking. We support the local economy and help make Ahmedabad a true smart city.</p>
+      <p>Whether you're commuting to work at Gandhinagar or meeting friends at Manek Chowk, Smart Parking Finder gives you peace of mind. The platform is built with scalability and privacy at its core, ensuring a seamless experience.</p>
+    </div>
+
+    <!-- Team section (extra) -->
+    <div class="team-section">
+      <h3>Our Leadership</h3>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Neha Shah">
+          <h4>Neha Shah</h4>
+          <p>CEO & Co-founder</p>
+        </div>
+        <div class="team-member">
+          <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Rahul Desai">
+          <h4>Rahul Desai</h4>
+          <p>CTO</p>
+        </div>
+        <div class="team-member">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Anjali Mehta">
+          <h4>Anjali Mehta</h4>
+          <p>Head of Operations</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Milestone timeline -->
+    <div class="timeline">
+      <h3>Our Journey</h3>
+      <ul>
+        <li><span>2023</span> Idea born at Ahmedabad Startup Fest</li>
+        <li><span>2024</span> Pilot with 5 parking lots</li>
+        <li><span>2025</span> Expanded to 30+ locations</li>
+        <li><span>2026</span> Serving 2500+ drivers daily</li>
+      </ul>
+    </div>
+  </main>
+
+  <div class="time-india" id="indiaTime">Loading Indian time...</div>
+  <footer class="page-footer">
+    <p>&copy; 2026 ParkSmart — Ahmedabad, Gujarat, India</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
